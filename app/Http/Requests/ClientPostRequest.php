@@ -3,6 +3,7 @@
 namespace App\Http\Requests;
 
 use Illuminate\Foundation\Http\FormRequest;
+use App\Rules\ToWodValidation;
 
 class ClientPostRequest extends FormRequest
 {
@@ -26,6 +27,7 @@ class ClientPostRequest extends FormRequest
         return [
             'firstName'=> 'required|min:5|max:160',
 	        'lastName' => ['required', 'min:5', 'max:160'],
+            'coments' => [new ToWodValidation],
         ];
     }
 }

@@ -22,6 +22,7 @@ class ClientController extends Controller
         $cli = new Client();
         $cli->firstName = $request->firstName;
         $cli->lastName = $request->lastName;
+        $cli->coments = $cli->regra1($request->coments);
         $cli->save();
 
         return redirect('/')->with('msg', 'Client was created Successfully');
@@ -37,8 +38,8 @@ class ClientController extends Controller
         $cli = Client::find($id);
         $cli->firstName = $request->firstName;
         $cli->lastName = $request->lastName;
+        $cli->coments = $cli->regra1($request->coments);
         $cli->save();
-
         return redirect('/')->with('msg', 'Client was updated Successfully');
     }
 

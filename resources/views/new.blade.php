@@ -26,6 +26,11 @@
             <input type="text" name="lastName" class="form-control" id="lastName" value="{{isset($client) ? $client->lastName : old('lastName')}}">
         </div>
 
+        <div class="mb-3">
+            <label for="coments" class="form-label">Coments</label>
+            <input type="text" name="coments" class="form-control" id="coments" value="{{isset($client) ? $client->coments : old('coments')}}">
+        </div>
+
         <button type="submit" class="btn btn-primary  btn-lg col-3">Save</button>  <a href="{{ url('/') }}" class="btn btn-success  btn-lg col-3" style="float: right">Return</a>
     </form>
 
