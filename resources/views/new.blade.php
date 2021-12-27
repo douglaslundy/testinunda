@@ -26,7 +26,7 @@
             <input type="text" name="lastName" class="form-control" id="lastName" value="{{isset($client) ? $client->lastName : old('lastName')}}">
         </div>
 
-        <button type="submit" class="btn btn-primary  btn-lg col-3">Save</button>  <a href="{{ url('/') }}" class="btn btn-success  btn-lg col-3" style="float: right">Voltar</a>
+        <button type="submit" class="btn btn-primary  btn-lg col-3">Save</button>  <a href="{{ url('/') }}" class="btn btn-success  btn-lg col-3" style="float: right">Return</a>
     </form>
 
 
