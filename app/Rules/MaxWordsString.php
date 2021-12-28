@@ -3,8 +3,9 @@
 namespace App\Rules;
 
 use Illuminate\Contracts\Validation\Rule;
+use Illuminate\Support\Str;
 
-class ToWodValidation implements Rule
+class MaxWordsString implements Rule
 {
     /**
      * Create a new rule instance.
@@ -25,7 +26,7 @@ class ToWodValidation implements Rule
      */
     public function passes($attribute, $value)
     {
-        return true;
+        return str_word_count($value) <= 10;
     }
 
     /**
@@ -35,6 +36,6 @@ class ToWodValidation implements Rule
      */
     public function message()
     {
-        return 'The validation error message.';
+        return 'this field must have a maximum of 10 words.';
     }
 }

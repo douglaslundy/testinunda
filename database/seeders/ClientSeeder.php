@@ -16,17 +16,20 @@ class ClientSeeder extends Seeder
     {
         DB::table('clients')->insert([
             'firstName' => 'Client Test 1',
-            'lastName' => 'Last Name Test1'
+            'lastName' => 'Last Name Test1',
+            'coments' => 'Coments 1'
         ]);
 
         DB::table('clients')->insert([
             'firstName' => 'Client Test 2',
-            'lastName' => 'Last Name Test2'
+            'lastName' => 'Last Name Test2',
+            'coments' => 'Coments 2'
         ]);
 
         DB::table('clients')->insert([
             'firstName' => 'Client Test 3',
-            'lastName' => 'Last Name Test3'
+            'lastName' => 'Last Name Test3',
+            'coments' => 'Coments 3'
         ]);
     }
 }

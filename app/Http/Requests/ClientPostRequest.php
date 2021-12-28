@@ -3,7 +3,8 @@
 namespace App\Http\Requests;
 
 use Illuminate\Foundation\Http\FormRequest;
-use App\Rules\ToWodValidation;
+use App\Rules\MaxWordsString;
+use App\Rules\MinWordsString;
 
 class ClientPostRequest extends FormRequest
 {
@@ -27,7 +28,7 @@ class ClientPostRequest extends FormRequest
         return [
             'firstName'=> 'required|min:5|max:160',
 	        'lastName' => ['required', 'min:5', 'max:160'],
-            'coments' => [new ToWodValidation],
+            'coments' => [new MinWordsString, new MaxWordsString],
         ];
     }
 }

@@ -20,6 +20,7 @@
                 <th scope="col">ID</th>
                 <th scope="col">First Name</th>
                 <th scope="col">Last Name</th>
+                <th scope="col">Coments</th>
                 <th scope="col">Action</th>
             </tr>
         </thead>
@@ -30,6 +31,7 @@
                     <th scope="row">{{ $client->id }}</th>
                     <td>{{ $client->firstName }}</td>
                     <td>{{ $client->lastName }}</td>
+                    <td>{{ $client->coments }}</td>
                     <td>
                         <a href="{{ url('/edit/'.$client->id) }}" class="btn btn-primary col-3">Edit</a>
                         <a href="{{ url('/delete/'.$client->id) }}" class="btn btn-danger col-3">Delete</a>
